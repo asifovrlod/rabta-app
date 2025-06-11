@@ -11,7 +11,7 @@ export default function RegisterPage() {
         e.preventDefault();
         try {
             await registerUser(form.username, form.email, form.password);
-            router.push('/login');
+            router.push(`/verify-otp?email=${encodeURIComponent(form.email)}`);
         } catch (err) {
             if (err instanceof Error) {
                 alert(err.message);
