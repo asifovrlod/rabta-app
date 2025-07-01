@@ -9,7 +9,7 @@ const Header = () => {
                 <nav className='relative z-50 flex justify-between'>
                     <div className='flex items-center md:gap-x-12'>
                         <a href="/">
-                            <Image src={Logo} alt="Rabta Logo" width={150} height={75} />
+                            {/* <Image src={Logo} alt="Rabta Logo" width={150} height={75} /> */}
                         </a>
                         <div className='hidden md:flex md:gap-x-6'>
                             <a href="/" className='font-semibold text-gray-900 hover:text-gray-700'>Feature</a>
