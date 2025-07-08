@@ -2,11 +2,11 @@
 
 const API_URL = process.env.NEXT_PUBLIC_STRAPI_API_URL || 'http://localhost:1337/api';
 
-export async function registerUser(username: any, email: any, password: any) {
+export async function registerUser(firstname: any, lastname: any, email: any, password: any, referralsource: string) {
     const res = await fetch(`${API_URL}/auth/local/register`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username, email, password }),
+        body: JSON.stringify({ firstname, lastname, email, password, referralsource }),
     });
     if (!res.ok) throw new Error('Registration failed');
     return res.json();
